@@ -14,18 +14,19 @@
 
     body {
       text-align: center;
-      font-family: 'Verdana', sans-serif;
+      font-family: 'Courier New', monospace;
       line-height: 0.8;
     }
 
     header {
 /*       background-color: #6A5ACD; */
+      font-family: 'Verdana', sans-serif;
       color: white;
       font-size: 5em;
       padding: 15px;
       text-align: left;
       position: absolute;
-      top: 22%;
+      top: 30%;
       left: 22%;
       transform: translate(-50%, -50%);
     }
@@ -89,34 +90,72 @@
       z-index: -1;
     }
     .description {
-      position: absolute;
-    	top: 50;
-      left: 50; /* Adjust the distance from the left side */
-      width: 80%;
-      transform: translate(0%, 300%);
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height:100%;
       background: rgba(0, 0, 0, 0.3);
-      padding: 20px;
+      padding: 100px;
       box-sizing: border-box;
       border-radius: 15px;
       opacity: 0;
-      transition: opacity 0.5s;
+      transition: opacity 0.5s, background 0.5s;
+      text-align: left;
     }
-
+    .description img {
+      width: 200px; /* Adjust the width of the image as needed */
+      
+      margin-right: 20px; /* Adjust the spacing between image and text */
+    }
+    
+    .show-description {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.7); /* Change the background to white with opacity */
+    }
+    
     .description p {
-      font-size: 1.2em;
-      color: white;
+      color: black;
       line-height: 1.15;
       text-align: left;
     }
-    
-      .show-description {
-      opacity: 1;
+  
+    .carousel-container {
+      overflow: hidden;
+      white-space: nowrap;
     }
 
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img {
+      width: 50vw;
+      height: auto;
+      padding: 50px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 150%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+    }
+
+    .left-arrow {
+      left: 10px;
+    }
+
+    .right-arrow {
+      right: 10px;
+    }
     
     footer {
       position: relative;
-      background-color: #7B68EE;
+      background-color: pink;
       color: white;
       padding: 10px;
       text-align: center;
@@ -145,24 +184,73 @@
   <section class="gif-container">
           <div class="about-gif"></div>
   </section>
-  
+<!--   
     <div class="description">
-    <p>
-      UX / UI
-      <br>
-      GRAPHIC DESIGN
-      <br>
-      DIGITAL MARKETING
-    </p>
+         <img src="me.jpeg" alt="Your Image">
+        <img src="me2.jpg" alt="Your Image">
+         <img src="me3.jpg" alt="Your Image">
+         <img src="me4.jpg" alt="Your Image"> -->
+    
+      <div class="carousel-container">
+    <div class="carousel">
+      <img src="me.jpeg" alt="Photography 1">
+      <img src="me2.jpg" alt="Photography 2">
+      <img src="me3.jpg" alt="Photography 3">
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+
+  <div class="arrow left-arrow" onclick="prevSlide()">❮</div>
+  <div class="arrow right-arrow" onclick="nextSlide()">❯</div>
+        
+      <script>
+    const carousel = document.querySelector('.carousel');
+    let currentIndex = 0;
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % carousel.children.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const translateValue = -currentIndex * 100 + 'vw';
+      carousel.style.transform = 'translateX(' + translateValue + ')';
+    }
+  </script>
+      
+      
+      <h2>
+			About me
+    </h2>
       <br>
       <hr>
       <br>
+    <p>   
+			Hi! I'm Chloe, a second-year student pursuing Global Business and Digital Arts 
+      at the University of Waterloo.
+   	</p>
+      <br>
+  	<p>
+				Beyond the textbooks, you'll often find me out and about, exploring the city, indulging in good food,
+      capturing moments through my lens, breaking a sweat at the gym, and embracing what life has to offer!
+		</p>
+      <br>
     <p>
-     Hello! I'm Chloe, a creative and passionate second-year student at the University of Waterloo.
-    </p>
+        What truly gets my creative juices flowing is the captivating realm of UX/UI and graphic design.
+      The way these fields seamlessly blend technology and aesthetics has me hooked. I'm on a mission to 
+      soak up every bit of knowledge, embracing the challenges and trends that come my way.
+		</p>
+      <br>
     <p>
-      I am eager to expand my knowledge in the evolving landscape of UX/UI, graphic design, and digital marketing.
-      My goal is to collaborate with like-minded individuals and organizations that would allow me to contribute my skills and creativity to the industry.
+			I'm fueled by the excitement of collaborating with like-minded individuals and
+      organizations. My goal? To weave my skills and creativity into projects that leave a mark on the
+      industry. So, if you're all about pushing boundaries and making an impact in the digital realm,
+      let's connect and create something extraordinary together!
     </p>
   </div>
   
@@ -186,7 +274,7 @@
   </script>
   
   <footer>
-    <p>&copy; 2023 My One-Page Website</p>
+<!--     <p>&copy; 2023 My One-Page Website</p> -->
   </footer>
 </body>
 </html>
