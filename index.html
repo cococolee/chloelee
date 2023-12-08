@@ -19,7 +19,7 @@
     }
 
     header {
-/*       background-color: #6A5ACD; */
+      background-color: #6A5ACD;
       font-family: 'Verdana', sans-serif;
       color: white;
       font-size: 5em;
@@ -76,8 +76,8 @@
     .gif-container {
     	position: relative;
     	overflow: hidden;
-      width: 50%; /* Adjust the width as needed */
-      margin: 0 auto; /* Center the container */
+      width: 50%; 
+      margin: 0 auto; 
 }
     .about-gif {
       position: fixed;
@@ -104,8 +104,8 @@
       text-align: left;
     }
     .description img {
-      width: 200px; /* Adjust the width of the image as needed */
-      
+      max-width: 300px; /* Adjust the width of the image as needed */
+      max-height: 300px;
       margin-right: 20px; /* Adjust the spacing between image and text */
     }
     
@@ -131,9 +131,9 @@
     }
 
     .carousel img {
-      width: 50vw;
-      height: auto;
-      padding: 50px;
+      max-width: 50vw;
+      max-height: 50vw;
+      padding: 20px;
     }
 
     .arrow {
@@ -153,13 +153,13 @@
       right: 10px;
     }
     
-    footer {
+/*     footer {
       position: relative;
       background-color: pink;
       color: white;
       padding: 10px;
       text-align: center;
-    }
+    } */
   </style>
 </head>
 <body>
@@ -184,18 +184,19 @@
   <section class="gif-container">
           <div class="about-gif"></div>
   </section>
-<!--   
+  
     <div class="description">
-         <img src="me.jpeg" alt="Your Image">
-        <img src="me2.jpg" alt="Your Image">
-         <img src="me3.jpg" alt="Your Image">
-         <img src="me4.jpg" alt="Your Image"> -->
-    
       <div class="carousel-container">
     <div class="carousel">
       <img src="me.jpeg" alt="Photography 1">
       <img src="me2.jpg" alt="Photography 2">
-      <img src="me3.jpg" alt="Photography 3">
+      <img src="me4.jpg" alt="Photography 3">
+      <img src="cityphoto.heic" alt="Photography 3">
+      <img src="fish.JPG" alt="Photography 3">
+      <img src="lilyphoto.jpg" alt="Photography 3">
+      <img src="groupphoto.JPG" alt="Photography 3">
+      <img src="oystersphoto].JPG" alt="Photography 3">
+      <img src="sunsetphoto.JPG" alt="Photography 3">
       <!-- Add more images as needed -->
     </div>
   </div>
@@ -222,11 +223,8 @@
       carousel.style.transform = 'translateX(' + translateValue + ')';
     }
   </script>
-      
-      
-      <h2>
-			About me
-    </h2>
+  
+      <h2>About me</h2>
       <br>
       <hr>
       <br>
@@ -252,7 +250,7 @@
       industry. So, if you're all about pushing boundaries and making an impact in the digital realm,
       let's connect and create something extraordinary together!
     </p>
-  </div>
+
   
    <script>
     let lastScrollTop = 0;
@@ -272,6 +270,7 @@
       lastScrollTop = scrollTop;
     });
   </script>
+  </div>
   
   <footer>
 <!--     <p>&copy; 2023 My One-Page Website</p> -->
