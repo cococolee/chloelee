@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One-Page Website</title>
+  <title>Home</title>
+  
+  <!--   Google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Caprasimo&family=Chango&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+
   <style>
     * {
       box-sizing: border-box;
@@ -14,7 +20,8 @@
 
     body {
       text-align: center;
-      font-family: 'Courier New', monospace;
+      font-family: 'Verdana', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       line-height: 0.8;
     }
 
@@ -88,6 +95,7 @@
      	filter: brightness(140%) contrast(120%);
       z-index: -1;
     }
+    
     .description {
       position: relative;
 /*       bottom: 0;
@@ -100,19 +108,22 @@
       transition: opacity 0.5s, background 0.5s;
       text-align: left;
       padding: 100px;
+      color: #728FCE;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+      font-family: Chango;
     }
     
     .show-description {
       opacity: 1;
-      background: rgba(255, 255, 255, 0.7); 
+      background: rgba(255, 255, 255, 0.9); 
     }
     
     .description p {
-      color: black;
       line-height: 1.15;
       text-align: left;
-/*       padding: 10px;
-      margin: 10px; */
+      color: Black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+      font-family: "Verdana";
     }
   
     .carousel-container {
@@ -161,8 +172,8 @@
       text-align: center;
     }
     .get-in-touch:hover,
-.get-in-touch:active {
-  background-color: #666FCE; /* Change the color on hover and click */
+		.get-in-touch:active {
+  		background-color: #666FCE; /* Change the color on hover and click */
 }
     footer {
       display: block;
