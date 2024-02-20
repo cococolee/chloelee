@@ -45,7 +45,7 @@
 
       nav {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         padding: 10px;
         right: 100%;
       }
@@ -126,7 +126,8 @@
         transition: opacity 0.5s, background 0.5s;
         text-align: left;
         padding: 100px;
-        color: #728FCE;
+/*         color: #728FCE; */
+        color: #6c94eb;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
         font-family: Verdana;
       
@@ -148,6 +149,7 @@
         font-size: 18px;
       }
       .description h4 {
+        
         line-height: 1.5;
         color: rgba(100, 100, 160);
         font-size: 18px;
@@ -158,9 +160,10 @@
       }
       .description h1 {
         font-family: "Montserrat";
-        text-shadow: 2px 2px 4px rgba(205, 100, 160, 0.5); 
-/*         text-shadow: 2px 2px 4px rgba(155, 255, 100, 0.5);
+/*         text-shadow: 2px 2px 4px rgba(205, 100, 160, 0.5);  */
+/*         text-shadow: 2px 2px 4px rgba(155,  255, 100, 0.5);
  */
+        text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
 
         
       }
@@ -197,7 +200,10 @@
   
 /*       width: 100%; */
       top: 100%;  
-      color: #728FCE;
+/*       color: #728FCE; */
+              color: #6c94eb;
+
+
 /*       padding: 25px; */
       text-align: center;
 /*       font-family: "Nunito"; */
@@ -209,6 +215,27 @@
       footer p{
 font-family: "Montserrat";
         color: white;
+      }
+      
+      work {
+        display: flex;
+        text-align: right;
+        font-family: "Montserrat";
+        color: white;
+        right: 0;
+        left:100%;
+        justify-content: right;
+
+
+
+      }
+      
+      work :hover {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+        text-stroke: 5px;
+        stroke-width: 5px;
+        
       }
 /*       .get-in-touch {
         display: block;
@@ -292,14 +319,14 @@ font-family: "Montserrat";
         
               <br>
       <h1>Hi, I'm Chloe!</h1>
-      
+      <br>
       
   
       <h4>
    I'm a second-year student pursuing Global Business and Digital Arts at the University of Waterloo. I'm passionnate about art, storytelling, and creating intuitive digital experiences rooted in research and design principles. Outside of school, you'll often find me out and about, exploring the city of Toronto, indulging in good food, capturing moments through photography, and staying active at the gym!
       
       </h4>
-     
+     <br>
       <h4>
        
     Currently, I’m seeking internship opportunities in UX Research, UX/UI Design, Product Design, Digital Marketing, and any related fields! 
@@ -356,6 +383,7 @@ font-family: "Montserrat";
       
           <a href="mailto:0229chloelee@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
           <a href="www.linkedin.com/in/chloe-lee-77aa90265" target="_blank"><i class="fab fa-linkedin"></i></a>
+          
 <br>
 <!--           <a href="https://www.instagram.com/leechloe_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> -->
         
@@ -363,6 +391,12 @@ font-family: "Montserrat";
             </div>
             
         </icon>
+        
+        <work>
+         <a href="https://cococolee.github.io/mywork/">
+           
+           Check out some of my work! →</a>
+        </work>
 <!--        <footer>
     <p>Designed and coded by Chloe Lee :)</p>
   </footer> -->
